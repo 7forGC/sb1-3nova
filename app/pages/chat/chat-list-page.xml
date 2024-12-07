@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <ActionBar title="Chats">
+    <ActionItem ios.position="right" android.position="actionBar">
+      <Label text="&#xf067;" class="fas" tap="{{ onNewChat }}" />
+    </ActionItem>
+  </ActionBar>
+
+  <GridLayout>
+    <ListView items="{{ chats }}" itemTap="{{ onChatTap }}" class="chat-list">
+      <ListView.itemTemplate>
+        <GridLayout columns="auto, *" rows="auto, auto" class="chat-item p-2">
+          <Image src="{{ avatar_url || '~/assets/default-avatar.png' }}" 
+                 class="rounded-full w-12 h-12" 
+                 row="0" rowSpan="2" col="0" />
+          <Label text="{{ name || participants }}" 
+                 class="font-semibold text-lg" 
+                 row="0" col="1" />
+          <Label text="{{ lastMessage }}" 
+                 class="text-gray-500" 
+                 row="1" col="1" />
+        </GridLayout>
+      </ListView.itemTemplate>
+    </ListView>
+  </GridLayout>
+</Page>

@@ -1,0 +1,28 @@
+<Frame defaultPage="pages/home/home-page">
+  <BottomNavigation id="bottomNav" class="bottom-nav">
+    <TabStrip>
+      <TabStripItem>
+        <Label text="Chat" />
+        <Image src="font://&#xf075;" class="fas t-36" />
+      </TabStripItem>
+      <TabStripItem>
+        <Label text="Calls" />
+        <Image src="font://&#xf095;" class="fas t-36" />
+      </TabStripItem>
+      <TabStripItem>
+        <Label text="Settings" />
+        <Image src="font://&#xf013;" class="fas t-36" />
+      </TabStripItem>
+    </TabStrip>
+
+    <TabContentItem>
+      <Frame defaultPage="pages/chat/chat-list-page" />
+    </TabContentItem>
+    <TabContentItem>
+      <Frame defaultPage="pages/calls/calls-page" />
+    </TabContentItem>
+    <TabContentItem>
+      <Frame defaultPage="pages/settings/settings-page" />
+    </TabContentItem>
+  </BottomNavigation>
+</Frame>

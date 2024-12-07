@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom theme colors */
+.ns-root {
+  --primary: #1a237e;
+  --primary-dark: #0d1642;
+  --primary-light: #534bae;
+  --accent: #2962ff;
+  --text-light: #ffffff;
+  --text-dark: #121212;
+  --surface: #1a1a2e;
+}
+
+.app-background {
+  background-color: var(--surface);
+}
+
+.bottom-nav {
+  background-color: var(--primary-dark);
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.bottom-nav-hidden {
+  opacity: 0;
+}
+
+.message-bubble {
+  background-color: var(--primary);
+  border-radius: 20;
+  padding: 12;
+  margin: 4;
+}
+
+.received-message {
+  background-color: var(--primary-light);
+}
